@@ -1,21 +1,25 @@
 package com.leetcode.p674;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
+import org.junit.rules.TestName;
 
 public class SolutionTest {
     
+    @Rule
+    public TestName name = new TestName();
+    private long startTime;
     private Solution solution;
     
     @Before
     public void setUp() throws Exception {
         solution = new Solution();
+        startTime = System.currentTimeMillis();
     }
     
     @After
     public void tearDown() throws Exception {
+        long endTime = System.currentTimeMillis();
+        System.out.println("Test method: " + name.getMethodName() + " , time: " + (endTime - startTime) + "ms");
     }
     
     @Test
