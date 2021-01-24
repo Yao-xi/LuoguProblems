@@ -1,9 +1,6 @@
 package com.luogu.p1217;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
