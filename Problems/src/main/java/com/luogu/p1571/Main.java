@@ -1,4 +1,4 @@
-package com.luogu.p1517;
+package com.luogu.p1571;
 
 import java.io.BufferedReader;
 import java.io.IOException;
