@@ -19,7 +19,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String expression = br.readLine();
         
-        String result = checkBracketMatching(expression);
+        String result = checkBracketMatching2(expression);
         System.out.println(result);
     }
     
@@ -41,6 +41,28 @@ public class Main {
             }
         }
         if (stack.size() > 0) {
+            return "NO";
+        }
+        return "YES";
+    }
+    private static String checkBracketMatching2(String expression) {
+        // 使用计数器
+        int count = 0;
+        // 遍历字符串
+        for (int i = 0; i < expression.length(); i++) {
+            char c = expression.charAt(i);
+            if (c == '(') {
+                count++;
+            }
+            if (c == ')') {
+                if (count > 0) {
+                    count--;
+                } else {
+                    return "NO";
+                }
+            }
+        }
+        if (count > 0) {
             return "NO";
         }
         return "YES";
